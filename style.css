@@ -1,0 +1,177 @@
+/*Variáveis*/
+:root {
+  --green: #04c35c;
+  --blue: #2b6cb0;
+
+  --white: #ffffff;
+  --white300: #f7fafc;
+
+  --dark: #1a202c;
+  --input: #e8e8e8;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button,
+input {
+  border: 0;
+}
+button:focus,
+input:focus {
+  border: 0;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "esquerdo login" ;
+}
+
+.esquerdo {
+  grid-area: esquerdo;
+  background-color: var(--white300);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.esquerdo img{
+  height: 330px;
+  width: 400px;
+}
+
+.login{
+ height: 100%;
+ width: 100%;
+ grid-area: login;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.login-form span {
+  margin-bottom: 7px;
+  
+}
+
+.login-form h1{
+  margin-bottom: 39px;
+}
+
+.login-form h1{
+  font-size: 26px;
+}
+
+.campo span{
+  display: block;
+  font-size: 16px;
+}
+
+.campo input{
+  width: 350px;
+  height: 50px;
+  border: 1px solid var(--input);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.lembrar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.buttons .entrar{
+  display: block;
+  width: 347px;
+  height: 50px;
+  background-color: var(--green);
+  color: var(--white);
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.buttons .google{
+  display: block;
+  font-weight: bold;
+  color: var(--white);
+  width: 347px;
+  height: 50px;
+  background-color: var(--dark);
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google img{
+  width: 20px;
+  height: 20px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.google span{
+  margin-top: 10px;
+}
+
+.footer{
+  margin-top: 162px;
+}
+
+
+@media (max-width:760px){
+  .container{
+    grid-template-columns: 100%;
+    grid-template-areas: "login";
+    margin: 0 auto;
+
+  }
+}
+
+
